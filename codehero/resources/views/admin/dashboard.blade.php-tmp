@@ -1,0 +1,4 @@
+@extends('admin_home')
+@section('admin_content')
+<h3>Chào mừng bạn đến với CodeHero</h3>
+@endsection

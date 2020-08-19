@@ -1,0 +1,43 @@
+@extends('admin_home')
+@section('admin_content')
+<div class="container-fluid">
+<div class="table-responsive">
+	<a href="course/add-course" class="btn btn-success"><i class="fas fa-plus"></i> Thêm khóa học</a>
+	<br>
+	<br>
+	<table class="table table-striped">
+		<thead>
+		<tr>
+			<td><input type="checkbox" name=""></td>
+			<td>ID</td>
+			<td>Tên khóa học</td>
+			<td>Mô tả</td>
+			<td>Số bài học</td>
+			<td>Loại</td>
+			<td>Chức năng</td>
+		</tr>
+		</thead>
+		<tbody>
+		@foreach($course as $key=> $value)
+		<tr>
+			<td><input data-id="{{$value['id_course']}}" type="checkbox" name=""></td>
+			<td>{{$value['id_course']}}</td>
+			<td>{{$value['title_course']}}</td>
+<?php
+echo '<td>'.htmlspecialchars_decode($value['desc_course']).'</td>';
+?>
+			<td>{{$value['total_lesson']}}</td>
+			<td>{{$value['cate_parent']}}</td>
+			<td>
+				<a class="btn btn-success" href="{{URL::to('admin/course/add-lesson/'.$value['id_course'])}}"><i class="fas fa-plus"></i> Thêm bài học</a>
+				<a class="btn btn-primary" href="{{URL::to('admin/course/edit-course/'.$value['id_course'])}}"><i class="far fa-edit"></i> Sửa</a>
+				<a class="btn btn-danger" href="#"><i class="far fa-trash-alt"></i> Xóa</a>
+			</td>
+		</tr>
+		@endforeach
+		</tbody>
+	</table>
+	{{ $course->links() }}
+</div>
+</div>
+@endsection

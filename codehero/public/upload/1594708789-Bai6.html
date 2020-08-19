@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Viết tài liệu để tạo biểu mẫu</title>
+</head>
+<body>
+	<h2><big>Interview Feedback</big></h2>
+	<h2><small>This type of form may be an easy way to consolidata/standardize feedback on interview candidates </small></h2>
+	<form action="" accept-charset="UTF-8">
+		<label for="Thi sinh"><b>Candidate Name:
+			<input type="text" name="Thi sinh" value="" placeholder="Nguyen Van A">
+		</b></label>
+		<label for="Vi tri ung tuyen"><b>Position Applied For:
+			<input type="text" name="Vi tri ung tuyen" value="" placeholder="Clerk">
+		</b></label>
+		<br>
+		<label for="Trinh do hoc van"><b>Education Level:</b>
+			<br>
+			<select name="gt">
+				<option value="HS">1)High School
+				</option>
+				<option value="BD">2)Bachelors Degree</option>
+				<option value="MD">3)Masters Degree</option>
+				<option value="DD">4)Doctoral Degree</option>
+				<option value="PC">5)Professional Certification</option>
+			</select>	
+		</label>
+		<br>
+		<label for=""><b>Candidate is a good fit for the position</b>
+			<br>
+			<input type="radio" name="vi tri" id="" value="agree">Agree
+			<br>
+			<input type="radio" name="vi tri" id="SA" value="some agree">Somewhat Agree
+			<br>
+			<input type="radio" name="vi tri" id="N" value="neutral">Neutral
+			<br>
+			<input type="radio" name="vi tri" id="SD" value="some dis">Somewhat Disagree
+			<br>
+			<input type="radio" name="vi tri" id="D" value="dis">Disagree	
+		</label>
+		<br>
+		<label for="Y/N"><b>Should we hire this candidate?</b>
+			<input type="radio" name="Y/N" id="Y" value="Yes">Yes
+			<input type="radio" name="Y/N" id="N" value="No">No
+		</label>
+		<br>
+		<label for="Nhan xet"><b>Comments</b>
+			<textarea rows="5" cols="20" placeholder="Type your text here"></textarea>
+		</label>
+		<br>
+		<input type="submit" name="submit">
+	</form>
+	
+</body>
+</html>

@@ -1,0 +1,15 @@
+<?php
+
+namespace App;
+
+use Carbon\Carbon;
+use Illuminate\Database\Eloquent\Model;
+
+class Comment extends Model {
+	protected $table      = "cmt";
+	protected $primaryKey = 'id_blog';
+	public function getTime() {
+		Carbon::setLocale('vi');
+		$this->created_at->diffForHumans(Carbon::now());
+	}
+}

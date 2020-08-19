@@ -1,0 +1,189 @@
+@extends('welcome')
+@section('content')
+<div class="main">
+            <div class="banner row">
+                <div class="banner_img col-lg-9">
+                    <img style="width: 100%" src="{{('public/frontend/img/pic1.png')}}" alt="">
+                </div>
+                <div class="col-lg-3">
+                    <div class="form_login">
+                        <div id="signin" class="input_login">
+                            <span class="header_title">Bắt đầu ngay</span>
+                            <form>
+                                <input class="input_item" type="text" placeholder="Tên đăng nhập" name="">
+                                <br>
+                                <input class="input_item" type="text" placeholder="Email" name="">
+                                <br>
+                                <input class="input_item" type="text" placeholder="Mật khẩu" name="">
+                                <br>
+                                <input class="input_item btn_reg" type="submit" value="Đăng Nhập" name="">
+                            </form>
+                                <p style="text-align: center;">Hoặc sử dụng tài khoản khác</p>
+                                <div class="icon_social">
+                                    <i style="color: #3b5998" class="fab fa-facebook-square icon"></i>
+                                    <i style="color: #bd081c" class="fab fa-pinterest-square icon"></i>
+                                    <i style="color: #1da1f2" class="fab fa-twitter-square icon"></i>
+                                </div>
+                        </div>
+                        <div id="signup" class="input_login">
+                            <span class="header_title">Đăng ký ngay</span>
+                            <form>
+                                <input class="input_item" type="text" placeholder="Tên đăng nhập" name="">
+                                <br>
+                                <input class="input_item" type="text" placeholder="Email" name="">
+                                <br>
+                                <input class="input_item" type="text" placeholder="Mật khẩu" name="">
+                                <br>
+                                <input class="input_item" type="text" placeholder="Nhập lại mật khẩu" name="">
+                                <br>
+                                <div class="agree_us">
+                                    <input type="checkbox" name="">Đồng ý với <a href="#">điều khoản</a> của chúng tôi
+                                </div>
+                                <br>
+                                <input class="input_item btn_reg" type="submit" value="Đăng Kí" name="">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div style="margin-top: 16px;" class="container-fluid">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <i style="color:#F868F0;" class="fas fa-chart-line icon_title"></i><span class="header_title">Phát triển tư duy sáng tạo</span>
+                            <p>Lorem Ipsum is it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <i style="color:#4DFF6A;" class="fas fa-laptop icon_title"></i><span class="header_title">Làm quen với thế giới công nghệ</span>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrly unchanged. It was popularised in</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <i style="color: #FAFC4F;" class="fas fa-at icon_title"></i><span class="header_title">Phát triển tư duy sáng tạo</span>
+                            <p>Lorem Ipas survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in</p>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <h1 style="text-align: center;font-size: 2.6rem;color: #0A255B"><span style="font-weight: bold">Ưu điểm</span> vượt trội</h1>
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-4">
+                            <div class="img_adv">
+                                <img style="height: 350px" class="img-fluid" src="{{('public/frontend/img/pic2.png')}}" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="main_adv">
+                                <ul class="list_adv">
+                                    <li class="item_adv">
+                                        <i style="background: #F651E8" class="fas fa-code icon_title icon_adv"></i>
+                                        <span class="title_adv">Hệ thống mạnh mẽ, hiện đại</span>
+                                    </li>
+                                    <li class="item_adv">
+                                        <i style="background: #F34D6C" class="fas fa-bookmark icon_title icon_adv"></i>
+                                        <span class="title_adv">Nội dung dễ hiểu, chi tiết</span>
+                                    </li>
+                                    <li class="item_adv">
+                                        <i style="background: #467C38" class="fas fa-medal icon_title icon_adv"></i>
+                                        <span class="title_adv">Sự kiện hấp dẫn, thu hút</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="main_adv">
+                                <ul  class="list_adv">
+                                    <li class="item_adv">
+                                        <i style="background: #AEA488" class="far fa-comment-dots icon_title icon_adv"></i>
+                                        <span class="title_adv">Cộng đồng đông đảo, năng động</span>
+                                    </li>
+                                    <li class="item_adv">
+                                        <i style="background: #452FEA"  class="fas fa-users icon_title icon_adv"></i>
+                                        <span class="title_adv">Đội ngũ nhiệt tình, chuyên môn</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="background: url(img/bg.jpg);background-size: cover;background-position: center;">
+                        <div style="background: rgba(39,63,150,.95);padding: 40px 8px">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="main_achieve">
+                                        <div>
+                                            <div class="nummber_icon">
+                                                <i class="fas fa-graduation-cap icon_title icon_adv icon_blue"></i><span class="nummber_grand">0000</span><span>+</span>
+                                            </div>
+                                            <span class="title_achieve">Học viên đã đăng ký</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="main_achieve">
+                                        <div>
+                                            <div class="nummber_icon">
+                                                <i class="fas fa-medal icon_title icon_adv icon_blue"></i><span>0000</span><span>+</span>
+                                            </div>
+                                            <span class="title_achieve">Chứng chỉ học tập</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="main_achieve">
+                                        <div>
+                                            <div class="nummber_icon">
+                                                <i class="fas fa-chart-line icon_title icon_adv icon_blue"></i><span>0000</span><span>+</span>
+                                            </div>
+                                            <span class="title_achieve">Quốc gia sử dụng</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div style="display: flex;justify-content: center;">
+                                <a class="btn btn-danger" href="#">Tham gia học lập trình ngay</a>
+                            </div>
+                        </div>
+                    </div>
+                <div class="container">
+                    <br>
+                    <h1 style="text-align: center;font-size: 2.6rem;color: #0A255B">Lộ trình để trở thành <span style="font-weight: bold">Lập trình viên</span></h1>
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <div class="step_courses">
+                                <img src="{{('public/frontend/img/pic4.png')}}" alt="">
+                                <h3>Học lập trình</h3>
+                                <p>Học lập trình từ cơ bản đến nâng cao thông qua các khóa học</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="step_courses">
+                                <img src="{{('public/frontend/img/pic6.png')}}" alt="">
+                                <h3>Luyện lập trình</h3>
+                                <p>Luyện lập trình hằng ngày với hành nghìn bằng tập lớn nhỏ</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="step_courses">
+                                <img src="{{('public/frontend/img/pic3.png')}}" alt="">
+                                <h3>Thi lập trình</h3>
+                                <p>Tham gia các cuộc thi và cải thiện kĩ năng lập trình liên tục</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="step_courses">
+                                <img src="{{('public/frontend/img/pic4.png')}}" alt="">
+                                <h3>Tìm hiểu lập trình</h3>
+                                <p>Tham gia các cuộc thi và cải thiện kĩ năng lập trình liên tục</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="background: url({{('public/frontend/img/pic7.png')}});height: 250px;background-size: cover;background-position: center;position: relative;text-align: center;">
+                        <a style="position: absolute;top: 80%;left: 50%;transform: translate(-50%,-50%);" class="btn btn-danger" href="#">Bắt đầu ngay!</a>
+                    </div>
+            </div>
+        </div>
+@endsection

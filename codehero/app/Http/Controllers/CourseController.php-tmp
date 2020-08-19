@@ -1,0 +1,66 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\CateCourse;
+use App\Course;
+use App\Lesson;
+use DB;
+use Illuminate\Http\Request;
+
+class CourseController extends Controller {
+	public function index() {
+		$course = Course::paginate(10);
+		return view('admin.course')->with("course", $course);
+
+	}
+	public function add_course() {
+		$data = CateCourse::all()->toArray();
+
+		return view("admin.add_course")->with("data", $data);
+	}
+	public function add_cate_course(Request $req) {
+		$data       = new CateCourse;
+		$data->name = $req->name_cate;
+		$data->save();
+		return back()->with('success', 'Tạo thành công');
+	}
+	public function add_lesson($id) {
+		$getLesson = DB::table('lesson')->where('course_parent', $id)->paginate(5);
+		return view("admin.add_lesson")->with("id_course", $id)->with("lessons", $getLesson);
+	}
+	public function insert_course(Request $request) {
+		$data = new Course;
+		$this->validate($request, [
+				'img_upload' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+			]);
+		if ($request->hasFile('img_upload')) {
+			$image           = $request->file('img_upload');
+			$name_img        = rand(11111, 99999).time().'.'.$image->getClientOriginalExtension();
+			$destinationPath = public_path('/images');
+			$dir_img         = "/images/".$name_img;
+			$image->move($destinationPath, $name_img);
+			$data->title_course = $request->title_course;
+			$data->desc_course  = $request->content_course;
+			$data->cate_parent  = $request->cate_course;
+			$data->img_course   = $dir_img;
+			$data->coin         = $request->coin;
+			$data->rate_course  = 5;
+			$data->total_lesson = 0;
+			$data->total_study  = 0;
+			$data->save();
+			return back()->with('success', 'Đăng bài thành công');
+		}
+	}
+	public function insert_lesson(Request $req) {
+		$data                = new Lesson;
+		$data->title_lesson  = $req->title_lesson;
+		$data->url_lesson    = $req->url_lesson;
+		$data->course_parent = $req->id_course;
+		$getNum              = DB::table('lesson')->where('course_parent', $req->id_course)->count();
+		$getNum++;
+		$data->num_lesson = $getNum;
+		$data->save();
+		return back();
+	}
+}

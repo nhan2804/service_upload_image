@@ -1,0 +1,36 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateTblCourse extends Migration {
+	/**
+	 * Run the migrations.
+	 *
+	 * @return void
+	 */
+	public function up() {
+		Schema::create('course', function (Blueprint $table) {
+				$table->increments('id_course');
+				$table->string('title_course');
+				$table->string('desc_course');
+				$table->string('img_course');
+				$table->integer('cate_parent');
+				$table->double('rate_course');
+				$table->integer('total_study');
+				$table->integer('total_lesson');
+				$table->integer('coin');
+				$table->timestamps();
+			});
+	}
+
+	/**
+	 * Reverse the migrations.
+	 *
+	 * @return void
+	 */
+	public function down() {
+		Schema::dropIfExists('course');
+	}
+}

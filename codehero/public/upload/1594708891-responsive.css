@@ -1,0 +1,141 @@
+@media (max-width: 1023px){
+	.hide-on-table-and-moblie{
+		display: none;
+	}
+	.center-table-and-moblie{
+		justify-content: space-between;
+	}
+}
+@media (min-width: 1024px){
+	.show-on-pc{
+		display: none;
+	}
+}
+@media (max-width: 1023px) and (min-width: 740px){
+	.hide-on-table{
+		display: none;
+	}
+}
+@media (max-width: 739px){
+	.hide-on-mobile{
+		display: none;
+	}
+	.intro-chapter-base .container .content-header{
+		margin-top: 60px !important;
+		width: 300px;
+		position: relative;
+    	left: -6.5em;
+	}
+	.explore-chapter-base {
+		padding-top: 0px;
+		min-height: 300px;
+    	margin-top: 0;
+	}
+	.container {
+		padding-right: 15px;
+		padding-left: 15px;
+		width: 360px;
+	}
+	
+	.explore-chapter-base .explore-card-base {
+		-webkit-transform: scale(0.6);
+		transform: scale(0.6);
+		margin: auto;
+		position: relative;
+		top: -14em;
+		left: 25px;
+	}
+	.explore-chapter-base .container .content-section-header {
+		text-align: center;
+		margin-top: -40px;
+		position: relative;
+    	top: 20em;
+	}
+	.explore-chapter-base .section-header {
+		padding-top: 20px;
+	}
+	.explore-chapter-base .feature-icon-base {
+		display: none;
+	}
+	.center-on-mobile{
+		margin-top: 60px !important;
+	}
+	.landing-section {
+		padding: 45px 0;
+	}
+	.title_section{
+		font-size: 32px;
+		text-align: center;
+		margin-bottom: 40px;
+		margin-right: 0.5em;
+	}
+	.list-key-features {
+		margin: 0;
+		position: relative;
+		right: 2.9em;
+	}
+	.list-key-features li {
+		margin-bottom: 30px;
+	}
+	.landing-section .row{
+		width: 360px;
+	}
+	.list-key-features .title_group h3 {
+		font-size: 18px;
+	}
+	.list-key-features .content{
+		font-size: 16px !important;
+	}
+	.title-section{
+		font-size: 32px;
+		text-align: center;
+		margin-bottom: 40px;
+	}
+	.step-list{
+		position: relative;
+		top: -10em;
+	}
+	.step-list li{
+		height: 440px;
+	}
+	.step-list li .image-container img{
+		width: 200px;
+    	position: relative;
+    	right: 5.5em;
+	}
+	.step-list li .content .subHeading{
+		width: 263px;
+		position: relative;
+		right: 20.5em;
+		font-size: 19px;
+		top: 11em;
+		text-align: center;
+	}  
+	.step-list li .content .description{
+		width: 263px;
+		position: relative;
+		right: 24.5em;
+		top: 13em;
+		font-size: 16px !important;
+	}
+	.footer-section2 .container .content{
+		position: relative;
+		right: 0.3em;
+	}
+	footer .container .contact{
+		position: relative;
+    	right: 3em;
+	}
+	footer .container .form{
+		margin-left: 2em;
+	}
+	footer .container .header-form{
+		position: relative;
+		right: 1.5em;
+	}
+	footer .container .social{
+		position: relative;
+    	right: 3em;
+	}
+	
+}

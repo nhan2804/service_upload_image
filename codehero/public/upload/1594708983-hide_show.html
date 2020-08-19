@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .part{
+            background-color: #c3c3c3;
+            margin: 5px;
+        }
+        #panel, #flip {
+            padding: 5px;
+            text-align: center;
+            background-color: #e5eecc;
+            border: solid 1px #c3c3c3;
+        }
+        #panel {
+            padding: 50px;
+            display: none;
+            
+        }
+    </style>
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+       $(document).ready(function(){
+            $("#hide").click(function(){
+                $("p#hide_show").hide(400);
+            });
+            // click de an the p
+            $("#show").click(function(){
+                $("p#hide_show").show(400);
+            });
+            //click de show the p
+            $("#tog").click(function(){
+                $("p#hide_show").toggle(400);
+            });
+            // click de an hoac hien the p
+            $("#fadein").click(function(){
+                $("#div_blue").fadeIn(200);
+            })
+            $("#fadeout").click(function(){
+                $("#div_blue").fadeOut(200);
+            })
+            $("#fatog").click(function(){
+                $("#bluetog").fadeToggle(200);
+            })
+            $("#fato").click(function(){
+                $("div#blueto").fadeTo("slow",0.4);
+            })
+            //FadeToggle
+            $("#sldn").click(function(){
+                $("#panel").slideDown("slow");
+            });
+            // Slide Down
+            $("#slup").click(function(){
+                $("#panel").slideUp("slow");
+            });
+            //Slide Up
+            $("#sltog").click(function(){
+                $("#panel").slideToggle("slow");
+            });
+            //Slide Toggle
+            $("#ani").click(function(){
+                var left = $('#animate').css('left');
+                
+                var numleft= left.search('px');
+                var left2 = left.slice(0,numleft);
+                console.log(left2);
+                
+                if (left2>200) {
+                    $('#animate').css('left','0px');
+                }
+                $("div#animate").animate({
+                    left: '+=50px',
+                    opacity: '0.5',
+                    height: 'toggle'
+                });       
+            });
+            $("#start").click(function(){
+                $("div#stop").animate({left: '100px'}, 5000);
+                $("div#stop").animate({fontSize: '3em'}, 5000);
+            });
+            //bắt đầu
+            $("#stop").click(function(){
+                $("div#stop").stop();
+            });
+            //dừng
+            $("#stop2").click(function(){
+                $("div#stop").stop(true);
+            });
+            //dừng tất cả
+            $("#stop3").click(function(){
+                $("div#stop").stop(true, true);
+            }); 
+            //dừng và kết thúc
+            $("#btcb").click(function(){
+                $("p#cb").hide("slow", function(){
+                    alert("The paragraph is now hidden");
+                });
+            });
+            //sau khi click lan nữa sẽ hiện thông báo
+            $("#chain").click(function(){
+                $("p#chaining").css("color","red").slideUp(1000).slideDown(1000);
+            });
+       })
+    </script>
+    <script>
+        $(document).ready(function(){//execute a function when the document is fully loaded
+            $("#hide_all").click(function(){//assign a click event 
+                $("p").hide();//hide all <p> elements
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function(){//execute a function when the document is fully loaded
+            $("#hide_id").click(function(){//assign a click event 
+                $("#test").hide();//hide the element with the id="test"
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function(){//execute a function when the document is fully loaded
+            $("#hide_class").click(function(){//assign a click event 
+                $(".test").hide();//hide all elements with class="test"
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function(){//execute a function when the document is fully loaded
+            $("#hide_this").click(function(){//assign a click event 
+                $(this).hide();//hide the current html element
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function(){//execute a function when the document is fully loaded
+            $(".click_hide").click(function(){//assign a click event. The function is executed when the user click on the HTML element
+                $(this).hide();//hide the current html element
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function(){//execute a function when the document is fully loaded
+            $("#double_click").dblclick(function(){//assign a double click event. The function is executed when the user double-clicks on the HTML element
+                $(this).hide();//hide the current html element
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function(){//execute a function when the document is fully loaded
+            $("#p1").mouseenter(function(){//assign a mouse enter event.The function is executed when the mouse pointer enters the HTML element
+                alert("You entered p1!");
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function(){//execute a function when the document is fully loaded
+            $("#p2").mouseleave(function(){//assign a mouse leave event. The function is executed when the mouse pointer leaves the HTML elements
+                alert("Bye! You now leave p2!");
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function(){//execute a function when the document is fully loaded
+            $("#p3").mousedown(function(){//assign a mouse down event.The function is executed, when the left, middle or right mouse button 
+            //is pressed down, while the mouse is over the HTML element
+                alert("Mouse down over p3!");
+            });
+        });
+    </script>    
+    <script>
+        $(document).ready(function(){//execute a function when the document is fully loaded
+            $("#p4").mouseup(function(){//assign a mouse up event.The function is executed, when the left, middle or right mouse button 
+            //is released, while the mouse is over the HTML element
+                alert("Mouse up over p4!");
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function(){//execute a function when the document is fully loaded
+            $("#p5").hover(function(){//The hover() method takes two functions and is a combination of the mouseenter() and mouseleave() methods.
+            //The first function is executed when the mouse enters the HTML element, and the second function is executed when the mouse leaves the HTML element
+                alert("You entered p5!");
+            },
+            function(){
+                alert("Bye! You now leave p5!");
+            }); 
+        });
+    </script>
+    <script>
+        $(document).ready(function(){//execute a function when the document is fully loaded
+            $("input").focus(function(){//The focus() method attaches an event handler function to an HTML form field.
+            //The function is executed when the form field gets focus
+                $(this).css("background-color", "yellow");
+            });
+            $("input").blur(function(){//The blur() method attaches an event handler function to an HTML form field.
+            //The function is executed when the form field loses focus
+                $(this).css("background-color", "grey");
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function(){//execute a function when the document is fully loaded
+            $("#hide").click(function(){//The function is executed when the user click on the HTML element
+                $("#hide_show_ex").hide();//hide the html element
+            });
+            $("#show").click(function(){//The function is executed when the user click on the HTML element
+                $("#hide_show_ex").show();//show the html element
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function(){
+            $("#toggle").click(function(){//Shown elements are hidden and hidden elements are shown
+                $(".toggle").toggle();
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function(){
+            $(".ex .hide").click(function(){
+                $(this).parents(".ex").hide("slow");//The optional speed parameter specifies the speed of the hiding
+            });
+        });
+    </script>
+    <style> 
+        div.ex {
+            background-color: #e5eecc;
+            padding: 7px;
+            border: solid 1px #c3c3c3;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="part">
+       
+            <button id="hide">Hide</button>
+            <button id="show">Show</button>
+            <button id="tog">Toggle</button> <br>
+            <p id="hide_show">Click button to hide or show</p>
+        </div>
+        <div class="part">
+            <button id="fadein">fadein</button> 
+            <button id="fadeout">fadeout</button>
+            <button id="fatog">fadetoggle</button><br>
+            <div id="div_blue" style="width: 100px; height: 100px; background-color: blue; display: none;"></div>
+            <div id="bluetog" style="width: 100px; height: 100px; background-color: blue; display: none;"></div>
+        </div>
+        <div class="part">
+           
+            
+        </div>
+        <div class="part">
+            <button id="fato">fadeto</button>
+            <div id="blueto" style="width: 100px; height: 100px; background-color: blue; "></div>
+        </div>
+        <div class="part">
+            <button id="sldn">Slide down</button>
+            <button id="slup">Slide up</button> 
+            <button id="sltog">Slide toggle</button> <br>
+            <div id="panel">Hello world!</div>
+        </div>
+        <div class="part">
+            <button id="ani">Animation</button>
+            <div id="animate" style="background:#98bf21;height:100px;left:0;width:100px;position: relative;;"></div>
+        </div>
+        <div class="part">
+            <button id="start">Start</button>
+            <button id="stop">Stop</button>
+            <button id="stop2">Stop all</button>
+            <button id="stop3">Stop but finish</button>
+            <div id="stop" style="background:#98bf21;height:100px;width:200px;position:relative;">HELLO</div>
+        </div>
+        <div class="part">
+            <button id="btcb">Hide</button><br>
+            <p id="cb">click to hide</p>
+        </div>
+        <div class="part">
+            <button id="chain">Chaining</button> <br>
+            <p id="chaining">Chaining Chaining</p>
+        </div>
+        <h1>This is JQuery Selector Examples</h1>
+        <h2 class="test">This is a heading</h2>
+        <p class="test">This is a paragraph.</p>
+        <p id="test">This is another paragraph.</p>
+        <button id="hide_all">Click me to hide all paragraphs</button>
+        <button id="hide_id">Click me to hide the element with id="test"</button>
+        <button id="hide_class">Click me to hide the element with class="test"</button>
+        <button id="hide_this">Click me to hide myself</button>
+        <h1>This is JQuery Events Examples</h1>
+        <p class="click_hide">If you click on me, I will disappear.</p>
+        <p class="click_hide">Click me away!</p>
+        <p class="click_hide">Click me too!</p>
+        <p id="double_click">If you double-click on me, I will disappear.</p>
+        <p id="p1">Enter this paragraph.</p>
+        <p id="p2">This is paragraph p2.</p>
+        <p id="p3">This is paragraph p3.</p>
+        <p id="p4">This is paragraph p4.</p>
+        <p id="p5">This is paragraph p5.</p>
+        Name: <input type="text" name="fullname" style="margin-bottom: 15px;"><br>
+        Email: <input type="text" name="email"><br>
+        <h1>This is JQuery Hide and Show Examples</h1>
+        <p id="hide_show_ex" class="toggle">If you click on the "Hide" button, I will disappear.</p>
+        <p class="toggle">This is another paragraph.</p>
+        <button id="hide">Hide</button>
+        <button id="show">Show</button>
+        <button id="toggle">Toggle between hiding and showing the paragraphs</button>
+        <h3>Island Trading</h3>
+        <div class="ex">
+            <button class="hide">Hide me</button>
+            <p>Contact: Helen Bennett<br> 
+            Garden House Crowther Way<br>
+            London</p>
+        </div>
+        <h3>Paris Specialities</h3>
+        <div class="ex">
+            <button class="hide">Hide me</button>
+            <p>Contact: Marie Bertrand<br> 
+            265, Boulevard Charonne<br>
+            Paris</p>
+        </div>
+    </div>
+</body>
+</html>
